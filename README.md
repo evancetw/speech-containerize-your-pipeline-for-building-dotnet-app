@@ -34,3 +34,14 @@ docker image list --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}\t{{.Size}}"
 docker build --output=bin_worker --target=binaries -f .\Evance.Speech.Demo230708.WorkerService\Dockerfile .
 ```
 
+## Mono
+
+```powershell
+cd src\Evance.Speech.Demo230708
+
+docker build --tag=demo.mono.webapi --target=webapi_final .
+docker build --tag=demo.mono.worker --target=worker_final .
+
+docker image list --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}\t{{.Size}}"
+```
+
