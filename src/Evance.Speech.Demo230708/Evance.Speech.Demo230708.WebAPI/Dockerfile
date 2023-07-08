@@ -46,4 +46,5 @@ ENTRYPOINT ["dotnet", "Evance.Speech.Demo230708.WebAPI.dll"]
 # * 設定 container 啟動後要執行的指令
 # * 等同於在 terminal 輸入 dotnet Evance.Speech.Demo230708.WebAPI.dll
 
-
+FROM scratch AS binaries
+COPY --from=publish /app/publish .
